@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500;700;900&display=swap");
+/* ----------- */
+/*    Global   */
+/* ----------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  color: #4f7d7d;
+  font-family: Barlow, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: 1.625;
+}
+
+h1,
+h2,
+h3 {
+  color: #162542;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: clamp(3rem, 1vw + 2.8rem, 3.5rem);
+  line-height: 1;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 1.125;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 1.167;
+}
+
+p {
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 1170px;
+  padding: 0 24px;
+  margin: 0 auto;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .wrapper {
+    padding: 0 40px;
+  }
+}
+@media (min-width: 1170px) {
+  .wrapper {
+    padding: 0 24px;
+  }
+  .wrapper::before, .wrapper::after {
+    background: #e8eff2;
+    border-radius: 20px;
+    content: "";
+    display: block;
+    width: 255px;
+    height: 236px;
+    position: absolute;
+  }
+  .wrapper::before {
+    left: -255px;
+    top: 951px;
+  }
+  .wrapper::after {
+    right: -255px;
+    top: 197px;
+  }
+}
+
+/* ---------------- */
+/*    Header Area   */
+/* ---------------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 64px;
+  padding-top: 24px;
+}
+@media (min-width: 1170px) {
+  nav {
+    margin-bottom: 84px;
+    padding-top: 56px;
+  }
+}
+
+.Hero {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 64px;
+}
+.Hero__content, .Hero__img {
+  margin: 0 auto;
+}
+.Hero__content {
+  /* Force overflow of the Hero Image, but not stretch this container */
+  min-width: 339px;
+  max-width: 339px;
+}
+.Hero__ctaGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+.Hero__ctaGroup a {
+  margin-right: 32px;
+}
+.Hero__ctaGroup span {
+  flex: 1;
+}
+.Hero__img {
+  background: url("https://assets.codepen.io/4527014/image-keyboard-mobile.jpg?format=auto") center center/cover no-repeat;
+  width: 372px;
+  height: 331px;
+}
+@media (min-width: 768px) {
+  .Hero {
+    flex-direction: row;
+    align-items: center;
+  }
+  .Hero > * {
+    /* Remove auto margin surrounding the image and content container so justify-content can be used properly at tablet and wider */
+    margin: 0;
+  }
+  .Hero__img {
+    background-image: url("https://assets.codepen.io/4527014/image-keyboard-tablet.jpg?format=auto");
+    min-width: 478px;
+    height: 425px;
+  }
+}
+@media (min-width: 985px) {
+  .Hero__content {
+    max-width: 445px;
+  }
+  .Hero__img {
+    background-image: url("https://assets.codepen.io/4527014/image-keyboard-desktop.jpg?format=auto");
+    width: 540px;
+    height: 480px;
+  }
+}
+
+/* --------- */
+/*    Main   */
+/* --------- */
+/* - Main Info - */
+.MainInfo {
+  margin: 24px auto 118px;
+  max-width: 374px;
+}
+.MainInfo__images {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto 72px;
+  gap: 24px;
+}
+.MainInfo__images > div:first-of-type {
+  background: #f16718 url("https://assets.codepen.io/4527014/image-phone-and-keyboard-mobile.jpg?format=auto") center center/cover no-repeat;
+  background-blend-mode: multiply;
+  min-width: 129px;
+  height: 193px;
+  position: relative;
+}
+.MainInfo__images > div:last-of-type {
+  background: url("https://assets.codepen.io/4527014/image-glass-and-keyboard-mobile.jpg") center center/cover no-repeat;
+  min-width: 220px;
+  height: 193px;
+}
+.MainInfo__details {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 398px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .MainInfo {
+    max-width: 689px;
+  }
+  .MainInfo__images {
+    justify-content: center;
+    gap: 30px;
+  }
+  .MainInfo__images > div:first-of-type {
+    background-image: url("https://assets.codepen.io/4527014/image-phone-and-keyboard-tablet.jpg?format=auto");
+    min-width: 214px;
+    height: 320px;
+  }
+  .MainInfo__images > div:last-of-type {
+    background-image: url("https://assets.codepen.io/4527014/image-glass-and-keyboard-tablet.jpg");
+    width: 445px;
+    height: 320px;
+  }
+  .MainInfo__details {
+    flex-direction: row;
+    jusitfy-content: space-between;
+    max-width: none;
+    text-align: left;
+  }
+  .MainInfo__details p {
+    max-width: 398px;
+  }
+}
+@media (min-width: 1170px) {
+  .MainInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 126px;
+    max-width: none;
+  }
+  .MainInfo__images > div:first-of-type {
+    background-image: url("https://assets.codepen.io/4527014/image-phone-and-keyboard-desktop.jpg?format=auto");
+    width: 255px;
+    height: 480px;
+  }
+  .MainInfo__images > div:last-of-type {
+    background-image: url("https://assets.codepen.io/4527014/image-glass-and-keyboard-desktop.jpg");
+    width: 445px;
+    height: 480px;
+  }
+  .MainInfo__details {
+    flex-direction: column;
+  }
+}
+
+.FeatureSection {
+  display: flex;
+  justify-content: center;
+}
+.FeatureSection > ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 72px 64px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 688px;
+}
+@media (min-width: 768px) {
+  .FeatureSection > ul {
+    align-items: normal;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 80px;
+  }
+}
+@media (min-width: 1170px) {
+  .FeatureSection > ul {
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+    width: 100%;
+  }
+}
+
+.Feature {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 48px;
+  text-align: center;
+  max-width: 374px;
+}
+.Feature__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f16718;
+  border-radius: 16px;
+  width: 65px;
+  height: 65px;
+}
+.Feature__image img {
+  max-width: 25px;
+  max-height: 27px;
+}
+.Feature__details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.Feature__details h3 {
+  width: 196px;
+}
+@media (min-width: 768px) {
+  .Feature {
+    align-items: flex-start;
+    text-align: left;
+    max-width: 281px;
+  }
+  .Feature__details {
+    align-items: flex-start;
+  }
+}
+@media (min-width: 1170px) {
+  .Feature {
+    max-width: 255px;
+  }
+}
+
+footer {
+  margin-top: 104px;
+  padding: 0 0 46px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  footer {
+    margin-top: 148px;
+  }
+}
+@media (min-width: 1170px) {
+  footer {
+    margin-top: 135px;
+  }
+}
+
+/* -- General Utils -- */
+.BigImg {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  height: 58px;
+  width: 175px;
+  padding: 0 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.5s background, 0.5s color;
+}
+.Button:hover {
+  cursor: pointer;
+}
+.Button--primary {
+  background: #f16718;
+  color: white;
+}
+.Button--primary:hover, .Button--primary:focus {
+  background: #ff9b62;
+}
+.Button--secondary {
+  background: #e8eff2;
+  color: #162542;
+}
+.Button--secondary:hover, .Button--secondary:focus {
+  color: white;
+  background: #162542;
+}
