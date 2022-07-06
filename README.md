@@ -19,7 +19,7 @@ This is a solution to the [Typemaster pre-launch landing page challenge on Front
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Typemaster pre-launch landing page](https://ekizashvilit.github.io/typemaster-pre-launch-landing-page/)
 
 ## Author
 
