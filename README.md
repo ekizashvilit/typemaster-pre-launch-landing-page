@@ -1,17 +1,12 @@
 # Frontend Mentor - Typemaster pre-launch landing page solution
 
-This is a solution to the [Typemaster pre-launch landing page challenge on Frontend Mentor]().
-
 ## Table of contents
 
 - [Frontend Mentor - Typemaster pre-launch landing page solution](#frontend-mentor---typemaster-pre-launch-landing-page-solution)
-  - [Table of contents](#table-of-contents)
-    - [The challenge](#the-challenge)
     - [Screenshot](#screenshot)
     - [Links](#links)
   - [Author](#author)
 
-## Overview
 
 ### Screenshot
 
